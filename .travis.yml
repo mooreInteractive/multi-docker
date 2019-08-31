@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t mooreinteractive/react-test -f ./client/Dockerfile.dev ./client
+  - docker build -t mooreinteractive/react-test -f ./Dockerfile.dev ./client
 
 script:
   - docker run -e CI=true mooreinteractive/react-test npm test -- --coverage
