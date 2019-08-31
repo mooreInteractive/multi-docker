@@ -3,20 +3,20 @@ services:
   - docker
 
 before_install:
-  - docker build -t mooreInteractive/react-test -f ./client/Dockerfile.dev ./client
+  - docker build -t mooreinteractive/react-test -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run -e CI=true mooreInteractive/react-test npm test -- --coverage
+  - docker run -e CI=true mooreinteractive/react-test npm test -- --coverage
 
 after_success:
-  - docker build -t mooreInteractive/multi-client ./client
-  - docker build -t mooreInteractive/multi-nginx ./nginx
-  - docker build -t mooreInteractive/multi-server ./server
-  - docker build -t mooreInteractive/multi-worker ./worker
+  - docker build -t mooreinteractive/multi-client ./client
+  - docker build -t mooreinteractive/multi-nginx ./nginx
+  - docker build -t mooreinteractive/multi-server ./server
+  - docker build -t mooreinteractive/multi-worker ./worker
   # login to docker
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # push images to aws
-  - docker push mooreInteractive/multi-client
-  - docker push mooreInteractive/multi-nginx
-  - docker push mooreInteractive/multi-server
-  - docker push mooreInteractive/multi-worker
+  - docker push mooreinteractive/multi-client
+  - docker push mooreinteractive/multi-nginx
+  - docker push mooreinteractive/multi-server
+  - docker push mooreinteractive/multi-worker
