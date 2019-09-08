@@ -6,26 +6,26 @@
       "image": "mooreinteractive/multi-client",
       "hostname": "client",
       "essential": false,
-      "memory": 128
+      "memory": 512
     },
     {
       "name": "server",
       "image": "mooreinteractive/multi-server",
       "hostname": "api",
       "essential": false,
-      "memory": 128
+      "memory": 512
     },
     {
       "name": "worker",
       "image": "mooreinteractive/multi-worker",
       "essential": false,
-      "memory": 128
+      "memory": 512
     },
     {
       "name": "nginx",
       "image": "mooreinteractive/multi-nginx",
       "essential": true,
-      "memory": 128,
+      "memory": 512,
       "portMappings": [
         {
           "hostPort": 80,
