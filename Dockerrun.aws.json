@@ -5,20 +5,20 @@
       "name": "client",
       "image": "mooreinteractive/multi-client",
       "hostname": "client",
-      "essential": false,
+      "essential": true,
       "memory": 512
     },
     {
       "name": "server",
       "image": "mooreinteractive/multi-server",
       "hostname": "api",
-      "essential": false,
+      "essential": true,
       "memory": 128
     },
     {
       "name": "worker",
       "image": "mooreinteractive/multi-worker",
-      "essential": false,
+      "essential": true,
       "memory": 128
     },
     {
