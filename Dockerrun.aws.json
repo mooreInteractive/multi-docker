@@ -13,7 +13,7 @@
       "image": "mooreinteractive/multi-server",
       "hostname": "api",
       "essential": false,
-      "memory": 512
+      "memory": 128
     },
     {
       "name": "worker",
